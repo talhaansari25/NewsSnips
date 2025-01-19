@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* :root {
+  --dark: #14152a;
+  --light: #2f3046;
+  --material: #3a3fc5;
+  --lmaterial: #7479ff8b;
+  --text: #cccfd7;
+  --red: #ff4845;
+  --green: #17ff78;
+} */
+
+:root {
+  --dark: #10375C;  
+  --light: #f5f6fa;        
+  --material: #BBE1FA;   
+  --lmaterial: #a8dadc;    
+  --text: #2d3142;    
+  --red: #b259ff;    
+  --green: #8ac926;       
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--light);
+  user-select: none;
+  color: var(--text);
+  font-family: "Open Sans";
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.loader {
+  width: 60px;
+  padding: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--material);
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .loader {
+    margin-top: 50%;
+  }
+}
+
+.navbarT {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+.navbarT h1{
+  color: white;
+}
+
+.navbarT input {
+  width: 90%;
+  height: 5.5vh;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: var(--light);
+  font-size: 19px;
+  color: var(--text);
+  text-align: center;
+}
+
+.searchB{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+.searchB i{
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.navbarT select{
+  cursor: pointer;
+  width: 17%;
+  height: 5.5vh;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: var(--light);
+  font-size: 19px;
+  color: var(--text);
+  text-align: center;
+}
+
+.kaisa {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  height: 14vh;
+  text-align: center;
+  background-color: var(--dark);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.kaisa img{
+  width: 160px;   /* Set a fixed width */
+  height: 108px;  /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.kaisa h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.sF{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.sF i{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.sF i:active{
+  color: red;
+}
+
+.hihi{
+  width: 100%;
+  height: 10vh;
+  background-color: var(--dark);
+  text-align: center;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  display: flex;
+
+}
+
+.hihi i{
+  font-size: 25px;
+  margin-left: 2.5%;
+  padding-right: 5%;
+}
+
+.hihi i:hover{
+  color: var(--material);
+  cursor: pointer;
+}
+
+.newsB img{
+  width: 50%;
+  border-radius: 10px;
+}
+
+.newsF{
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 2%;
+  margin-top: 2%
+}
+
+.talha p{
+  font-size: 20px;
+  margin-top: 3%;
+  max-height: 30vh;
+  overflow-y: scroll;
+
+}
+
+.talha h3{
+  font-size: 27px;
+  color: var(--lmaterial);
+  background-color: var(--dark);
+  width: fit-content;
+  padding: 1% 6%;
+}
+
+.downD{
+  margin-left: 1.2%;
+  margin-top: 12%;
+}
+
+.downD h3{
+  font-size: 30px;
+}
+
+.downD p{
+  font-style: italic;
+  margin-top: 0.5%;
+  font-size: 20px;
+}
+
+.downD{
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  color: rgb(60, 155, 170);
+}
+
+.newsFeedB {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.news-item {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+}
+
+.news-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--text);
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+.button-container button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark);
+  color: white;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.flexNC{
+  display: flex;
+}
+
+.news-item {
+  width: 700px; /* Set your fixed width */
+  height: 500px; /* Set your fixed height */
+  overflow: hidden; /* Ensure no overflow */
+  position: relative; /* Position relative for absolute child */
+  border-radius: 8px; /* Optional: rounded corners */
+  margin: 10px; 
+}
+
+.news-item img {
+  width: 100%; /* Make the image fill the width of the container */
+  height: 100%; /* Make the image fill the height of the container */
+  object-fit: cover; /* This keeps the aspect ratio and covers the area */
+  border-radius: 8px; /* Match with the parent for rounded corners */
+}
+
+.newsComp2 {
+  width: 47%;
+  padding: 20px;
+  background-color: var(--dark); /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  /* max-height: 500px; */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.news-title{
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin-top: 50%;
+  width: 96%;
+}
+
+.newsComp2-title {
+  text-align: center;
+  font-size: 24px; /* Larger font size for the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Darker text color */
+}
+
+.newsComp2-scrollable-container {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+}
+
+.button-container {
+  width: 90%;  
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.button-container button{
+  font-size: 20px;
+}
+
+.newsComp2-item {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: start; 
+  width: 100%; 
+  height: 14vh; 
+  margin: 10px 0; 
+  text-align: center;
+  cursor: pointer; 
+  transition: transform 0.2s; 
+  background-color: var(--light);
+  border-radius: 9px;
+
+}
+
+.newsComp2-item:hover {
+  transform: scale(1.01);
+  background-color: var(--material);
+}
+
+.newsComp2-image {
+  width: 160px;  
+  height: 108px; 
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.newsComp2-item-title {
+  margin-top: 5px; 
+  font-weight: bold; 
+  color: var(--text);
+  margin-left: 2%;
+}
+
+
+.newsComp2{
+  margin-top: 3%;
+  height: 75vh !important;
+}
+
+.newsBK{
+  width: 14%;
+  height: 5.2vh;
+  border: none;
+  outline: none;
+  background-color: var(--material);
+  color: var(--text);
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.kaisa:hover{
+background-color: #0e253a;
+}
+.kaisa h3{
+  color: white;
+}
+
+.hihi{
+  color: white;
+}
+
+.bai{
+  font-size: 20px !important;
+}
+
+.newsB{
+  overflow-y: scroll;
+}
