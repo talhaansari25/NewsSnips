@@ -13,6 +13,10 @@ from flask_cors import CORS
 
 CORS(app)
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Hello from Flask on Vercel!"})
+
 @app.route('/search', methods=['POST'])
 def get_search():
     data = request.get_json()
