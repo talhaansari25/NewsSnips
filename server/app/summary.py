@@ -42,14 +42,14 @@ def compute_idf(documents):
     all_words = set([word for doc in documents for word in doc.split()])
     for word in all_words:
         doc_containing_word = sum(1 for doc in documents if word in doc.split())
-        idf[word] = math.log(N / (1 + doc_containing_word))  # Avoid division by zero with 1+
+        idf[word] = math.log(N / (1 + doc_containing_word)) 
     return idf
 
 
 def compute_tfidf(tf, idf):
     tfidf = {}
     for word, tf_value in tf.items():
-        tfidf[word] = tf_value * idf.get(word, 0)  # If word not found in IDF, use 0
+        tfidf[word] = tf_value * idf.get(word, 0)  
     return tfidf
 
 
@@ -81,9 +81,6 @@ def cosine_similarity(doc1, doc2):
     
     return dot_product / (magnitude1 * magnitude2)
 
-# cosine_sim = cosine_similarity(tfidf_doc1, tfidf_doc2)
-
-#--
 
 
 
@@ -120,8 +117,7 @@ def getSummary(text):
 
     max_frequency = max(word_frequencies.values())
     for word in word_frequencies.keys():
-        word_frequencies[word] = word_frequencies[word] / max_frequency  # normalizing in range 0 - 1 
-
+        word_frequencies[word] = word_frequencies[word] / max_frequency  
     sentence_tokens = list({sent.text for sent in doc.sents})
     sentence_scores = {}
     getSentenceScoreFromSentenceTokensWordFreq(sentence_scores, sentence_tokens, word_frequencies)
