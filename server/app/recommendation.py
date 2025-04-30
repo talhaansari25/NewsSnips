@@ -15,7 +15,7 @@ def getRecc(keywords):
     for keyword in sorted_keywords:
         found_articles = df[df['title'].str.contains(keyword, case=False)]        
         if not found_articles.empty:
-            # related_articles.extend(found_articles.head(2).to_dict('records'))
+           
             for index, row in found_articles.head(2).iterrows():
                 article_dict = row.to_dict()  # Convert the row to a dictionary
                 article_dict['row_no'] = index  # Add the row number
