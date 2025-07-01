@@ -34,6 +34,7 @@ const NewsComp2 = () => {
     }
     return array;
   };
+  //
 
   const handleNewsClick = async (newsItem) => {
     try {
