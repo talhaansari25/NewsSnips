@@ -6,7 +6,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.metrics import classification_report
 import joblib  # For saving the model
 
-# Load the dataset
+# Load  dataset
 data = pd.read_csv(r'train_category.csv')
 
 # Create DataFrame
