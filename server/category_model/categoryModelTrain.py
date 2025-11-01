@@ -12,7 +12,7 @@ data = pd.read_csv(r'train_category.csv')
 # Create DataFrame
 df = pd.DataFrame(data)
 
-# Split the data into training and testing sets
+# Split data into training and testing sets
 X = df['description']
 y = df['category']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
