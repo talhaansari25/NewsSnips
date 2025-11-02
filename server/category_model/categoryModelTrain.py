@@ -17,7 +17,7 @@ X = df['description']
 y = df['category']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Create a machine learning pipeline
+# Create machine learning pipeline
 pipeline = make_pipeline(TfidfVectorizer(stop_words='english'), MultinomialNB())
 
 # Hyperparameter tuning using Grid Search
