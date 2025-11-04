@@ -28,7 +28,7 @@ param_grid = {
 # Initialize GridSearchCV
 grid_search = GridSearchCV(pipeline, param_grid, cv=5, n_jobs=-1, verbose=1)
 
-# Train the model using Grid Search
+# Train model using Grid Search
 grid_search.fit(X_train, y_train)
 
 # Best parameters
