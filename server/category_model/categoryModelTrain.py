@@ -34,7 +34,7 @@ grid_search.fit(X_train, y_train)
 # Best parameters
 print("Best parameters found: ", grid_search.best_params_)
 
-# Evaluate the model
+# Evaluate model
 y_pred = grid_search.predict(X_test)
 print(classification_report(y_test, y_pred))
 
