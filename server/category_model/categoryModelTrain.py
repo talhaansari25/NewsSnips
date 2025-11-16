@@ -38,7 +38,7 @@ print("Best parameters found: ", grid_search.best_params_)
 y_pred = grid_search.predict(X_test)
 print(classification_report(y_test, y_pred))
 
-# Save the trained model
+# Save trained model
 joblib.dump(grid_search.best_estimator_, 'text_classifier_model.joblib')
 print("Model saved as 'text_classifier_model.joblib'.")
  
